@@ -41,12 +41,12 @@ How can we benchmark the effectivenes of Skills?
 
 ### Possible Metrics
 1. **Trigger Accuracy (Activation Rate)**: 
-    * Since Claude uses progressive disclosure (reading the YAML frontmatter to determine if a skill is relevant), you must measure how reliably it triggers.  
+    * Since agents use progressive disclosure (reading the YAML frontmatter to determine if a skill is relevant), you must measure how reliably it triggers.  
     * Target: >90% activation on relevant queries; 0% activation on completely unrelated queries (false positives).
 2. E**xecution Consistency (Determinism)**: 
     * One of the primary goals of a skill is repeatability. If you pass the same input multiple  times, does the layout, tone, and file structure remain uniform?  
 3. **Orchestration Efficiency**: 
-    * If your skill coordinates with the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) or external tools, track the number of tool calls. A high-performing skill drops the number of exploratory actions or errors an agent makes.
+    * If a skill coordinates with the [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) (MCP) or external tools, track the number of tool calls. A high-performing skill drops the number of exploratory actions or errors an agent makes.
 4. **User Correction Rate**: 
     * How often does a human have to intervene with statements like "No, follow step 3" or "You forgot the style guide"? 
     * A successful skill drops human course-correction to near zero.
