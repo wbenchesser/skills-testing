@@ -33,6 +33,8 @@ How can we benchmark the effectivenes of Skills?
             * survivors are written up as a human-readable vulnerability report.
         * A fresh agent independently re-verifies every finding against the source.
     * One of the big takeaways is that when looking at the coverage metrics, a single run finds only about half the bugs you'd catch across multiple runs. The ones that are found tend to be skewed toward the simpler and less subtle.
+* [The ProdSec Skills Reposoitory](https://github.com/RedHatProductSecurity/prodsec-skills)
+    * Security skills for AI coding assistants and agentic systems. Skills encode security recommendations, guidelines, and best practices.
         
 ## Benchmarking
 * What does it mean to benchmark a skill? Unlike standard prompt engineering, you are testing two distinct capabilities:
