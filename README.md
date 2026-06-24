@@ -1,7 +1,8 @@
 # Skills Testing
 
-## Research Question
-How can we benchmark the effectivenes of Skills?
+## Research Questions
+1. How can we benchmark the effectivenes of Skills?
+2. If we plan to use security skills to meet security goals in the Agentic Development Life Cycle (ADLC), how reliable are they?
 
 ## Definitions
 
@@ -52,3 +53,19 @@ How can we benchmark the effectivenes of Skills?
 4. **User Correction Rate**: 
     * How often does a human have to intervene with statements like "No, follow step 3" or "You forgot the style guide"? 
     * A successful skill drops human course-correction to near zero.
+
+## Approach
+
+To address the research questions, this project will focus on measuring the effectiveness of skills both in isolation and when used at scale in the ADLC. The approach should consist of the following key components:
+
+1. **Isolated Skill Testing**: Evaluate individual skills in controlled environments to establish baseline performance metrics for trigger accuracy, execution consistency, orchestration efficiency, and user correction rates.
+
+2. **ADLC Integration Testing**: Deploy skills within the full ADLC workflow to measure their effectiveness in realistic development scenarios, including how they interact with other skills and tools.
+
+3. **Vulnerability-Based Benchmarking**: Explore the feasibility of benchmarking skill effectiveness against a curated set of known vulnerabilities. This will involve:
+   * Drawing from established sources like the OWASP security benchmark and other vulnerability databases
+   * Identifying existing projects with documented security issues
+   * Creating test scenarios where security skills should detect and address these known vulnerabilities
+   * Measuring detection rates, false positives, and remediation quality
+
+4. **Comparative Analysis**: Assess the reliability and accuracy of security skills by comparing their performance against known vulnerability baselines, establishing confidence intervals for their use in production security workflows.
