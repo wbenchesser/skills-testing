@@ -1,0 +1,16 @@
+file,category,cwe,is_vulnerable,description
+sqli/sqli_001.py,sqli,89,true,String concatenation in SQL query
+sqli/sqli_002.py,sqli,89,true,f-string interpolation in SQL query
+sqli/sqli_003.py,sqli,89,true,.format() method in SQLAlchemy text()
+sqli/sqli_004.py,sqli,89,false,Parameterized query with placeholder
+sqli/sqli_005.py,sqli,89,false,SQLAlchemy ORM query builder
+xss/xss_001.py,xss,79,true,Flask f-string HTML response
+xss/xss_002.py,xss,79,true,Django mark_safe with user input
+xss/xss_003.py,xss,79,true,Jinja2 |safe filter on user data
+xss/xss_004.py,xss,79,false,Flask Jinja2 autoescaping enabled
+xss/xss_005.py,xss,79,false,Django template autoescaping enabled
+cmdi/cmdi_001.py,cmdi,78,true,os.system() with user input
+cmdi/cmdi_002.py,cmdi,78,true,subprocess.call with shell=True
+cmdi/cmdi_003.py,cmdi,78,true,os.popen() with concatenated input
+cmdi/cmdi_004.py,cmdi,78,false,subprocess.run() with list arguments
+cmdi/cmdi_005.py,cmdi,78,false,shlex.quote() sanitized input
