@@ -56,7 +56,7 @@
 
 ## Approach
 
-To address the research questions, this project will focus on measuring the effectiveness of skills both in isolation and when used at scale in the ADLC. The approach should consist of the following key components:
+Any project wishing to address the research questions will need to focus on measuring the effectiveness of skills both in isolation and when used at scale in the ADLC. The approach should consist of the following key components:
 
 1. **Isolated Skill Testing**: Evaluate individual skills in controlled environments to establish baseline performance metrics for trigger accuracy, execution consistency, orchestration efficiency, and user correction rates.
 
