@@ -69,3 +69,18 @@ To address the research questions, this project will focus on measuring the effe
    * Measuring detection rates, false positives, and remediation quality
 
 4. **Comparative Analysis**: Assess the reliability and accuracy of security skills by comparing their performance against known vulnerability baselines, establishing confidence intervals for their use in production security workflows.
+
+
+## Specific Tests
+
+In order to benchmark effectiveness, we'll want relevant code snippets that we as developers know should be handled by certain skills. Here are some matchups I've found:
+
+1. ProdSec's input-validation-injection
+    * Applied when reviewing or writing code that processes untrusted input, constructs queries or commands, or handles user-supplied data. Covers SQL, LDAP, OS command injection, prototype pollution, and general validation strategy.
+    > The OWASP benchmark has vulnerability examples relating to SQL Injection, LDAP Injection, Command Injection, and Prototype Pollution. 
+2. ProdSec's web-application-security
+    * Reviews web application security controls against OWASP-aligned risks. Use when building, auditing, or reviewing server-side web applications that handle user input, sessions, authentication, or access control.
+3. ProdSec's differential-review
+    * Performs security-focused differential review of code changes (PRs, commits, diffs). Adapts analysis depth to codebase size, uses git history for context, calculates blast radius, checks test coverage, and generates comprehensive markdown reports. Automatically detects and prevents security regressions.
+    * Meta-skill that should detect security regressions across categories
+
