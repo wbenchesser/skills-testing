@@ -83,3 +83,35 @@ In order to benchmark effectiveness, we'll want relevant code snippets that we a
     * Performs security-focused differential review of code changes (PRs, commits, diffs). Adapts analysis depth to codebase size, uses git history for context, calculates blast radius, checks test coverage, and generates comprehensive markdown reports. Automatically detects and prevents security regressions.
     * Meta-skill that should detect security regressions across categories
 
+
+## Results
+I used the agent-eval-harness to test ProdSec's input-validation-injection skill on a 53 test-case subset of relevant OWASP benchmarks. The Scoring Summary is displayed below.
+
+![Test Summary](./results/test-summary.png)
+
+### Takeaways
+1. Key Successes & Strengths
+    * SQL Injection Detection (Score: 5.0/5.0)
+        * **Status:** Production-ready; serves as the gold standard for other vulnerability types.
+        * **Why it succeeded:** Provided specific code examples (`PreparedStatement`), clear data flow tracing, concrete line number identification, and actionable fixes.
+        * **Judge Feedback:** > "demonstrates thorough understanding of the partial parameterization anti-pattern"
+    * Data Flow Analysis (Score: 4.0 - 5.0)
+        * **Status:** Core analytical framework is working correctly.
+        * **Why it succeeded:** Consistently tracked tainted input from source to sink. Successfully recognized complex indirection patterns (e.g., HashMaps, List manipulation, Base64 encoding).
+        * **Judge Feedback (case-003):** > "step-by-step walkthrough of the list manipulation... is precise and accurate"
+
+2. Gaps & Vulnerabilities
+    * XSS Detection Failure (Score: 4.0 Completeness / 0% Detection)
+        * **Status:** Failed to detect the vulnerability (the only complete detection failure).
+        * **Root Cause:** Claude correctly identified ESAPI encoding but falsely concluded "no vulnerability."
+        * **Next Steps:** Investigate `case-003` Java code to determine if the test case is mislabeled or if context-specific encoding scenarios are breaking the skill's logic.
+
+3. Evaluation & Methodology Insights
+    * Precision vs. Recall
+        * **Metrics:** 80% detection rate (4/5 cases), 0% false positives reported.
+        * **Takeaway:** The skill is highly conservative. It avoids alert fatigue (high precision) but under-detects in certain categories like XSS (low recall).
+    * Sample Size
+        * For testing purposes the sample size was low. Important next step will be increasing to see fewer impacts of statistical noise.
+
+4. Meta-Takeaway: The Eval Harness Works
+    * The evaluation infrastructure is highly reliable. Judges are objective, consistent (all 4.0s cited the exact same gap), and specific. **We can trust these scores to accurately guide iteration.**
