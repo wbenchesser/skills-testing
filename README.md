@@ -95,15 +95,15 @@ In order to benchmark effectiveness, we'll want relevant code snippets that we a
 | agent-to-agent-auth | Authenticates between agents | |
 | agent-to-mcp-server-auth | Secures agent-to-MCP authentication | Transport/authentication test suites inside the [Model Context Protocol (MCP) SDKs](https://github.com/modelcontextprotocol). |
 | agentic-actions-auditor | Audits autonomous agent actions |  |
-| algorithm-selection | Chooses secure crypto algorithms |  |
+| algorithm-selection | Chooses secure crypto algorithms | Python/Java configuration scripts purposefully selecting weak algorithms (e.g., MD5, DES) vs AES-GCM. |
 | apache-camel-security | Secures Apache Camel routes |  |
 | atheris | Fuzzes Python code for bugs |  |
 | audit-context-building | Builds comprehensive audit context |  |
 | authentication | Implements secure authentication |  |
 | authentication-enforcement | Enforces auth on all endpoints |  |
 | authorization | Validates access control |  |
-| avoid-api-keys | Replaces API keys with better auth |  |
-| aws-security | Applies AWS security best practices |  |
+| avoid-api-keys | Replaces API keys with better auth | Codebases intentionally committed with dummy API keys |
+| aws-security | Applies AWS security best practices | Rhino Security Labs' "Vulnerable by Design" cloud deployment tool, [CloudGoat](https://github.com/rhinosecuritylabs/cloudgoat). |
 | bidirectional-filtering | Filters input/output data flows |  |
 | build-yaml-misconfiguration | Detects insecure build configs |  |
 | cargo-fuzz | Fuzzes Rust projects |  |
@@ -221,9 +221,9 @@ In order to benchmark effectiveness, we'll want relevant code snippets that we a
 | variant-analysis | Finds vulnerability variants |  |
 | vector-forge | Tests vector embedding security |  |
 | vulnerability-management | Manages vulnerabilities |  |
-| web-application-security | Secures web applications |  |
+| web-application-security | Secures web applications | Multi-tiered vulnerable microservices codebases like [OWASP Juice Shop](https://github.com/juice-shop/juice-shop). |
 | workload-resilience | Ensures workload resilience |  |
-| wycheproof | Tests crypto using Wycheproof |  |
+| wycheproof | Tests crypto using Wycheproof | Test vectors from the [Google Wycheproof Project](https://github.com/google/wycheproof). |
 | xml-serialization-security | Secures XML serialization |  |
 | zeroize-audit | Audits memory zeroization |  |
 
