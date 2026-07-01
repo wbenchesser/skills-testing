@@ -103,27 +103,27 @@ In order to benchmark effectiveness, we'll want relevant code snippets that we a
 | authentication-enforcement | Enforces auth on all endpoints |  |
 | authorization | Validates access control |  |
 | avoid-api-keys | Replaces API keys with better auth | Codebases intentionally committed with dummy API keys |
-| aws-security | Applies AWS security best practices | Rhino Security Labs' "Vulnerable by Design" cloud deployment tool, [CloudGoat](https://github.com/rhinosecuritylabs/cloudgoat). |
-| bidirectional-filtering | Filters input/output data flows |  |
-| build-yaml-misconfiguration | Detects insecure build configs |  |
-| cargo-fuzz | Fuzzes Rust projects |  |
+| aws-security | Applies AWS security best practices | [CloudGoat](https://github.com/rhinosecuritylabs/cloudgoat): Rhino Security Labs' "Vulnerable by Design" cloud deployment tool. |
+| bidirectional-filtering | Filters input/output data flows | General OWASP benchmark |
+| build-yaml-misconfiguration | Detects insecure build configs | [GitHub Actions Goat](https://github.com/step-security/github-actions-goat): Deliberately Vulnerable GitHub Actions CI/CD Environment |
+| cargo-fuzz | Fuzzes Rust projects | [Trophy Case](https://github.com/rust-fuzz/trophy-case): A showcase of bugs found via fuzz testing Rust codebases |
 | client-metadata-support | Manages OAuth client metadata |  |
-| client-side-security | Secures frontend applications |  |
-| codeql | Runs static analysis for vulnerabilities |  |
+| client-side-security | Secures frontend applications | [Simply Vulnerable Application](https://github.com/nleach999/simply_vulnerable_react): React DOM XSS Vulnerabilities |
+| codeql | Runs static analysis for vulnerabilities | [Official CodeQL example snippets including vulnerabilities](https://github.com/github/codeql/tree/main/go/ql/examples/snippets) |
 | compiler-hardening | Enables security compiler flags |  |
-| consent-and-scoping | Manages OAuth consent and scopes |  |
-| constant-time-analysis | Detects timing side-channels |  |
-| constant-time-testing | Tests for timing leaks |  |
-| container-hardening | Secures container configurations |  |
+| consent-and-scoping | Manages OAuth consent and scopes | [Ory Hydra OAuth2 Providers Suite](https://github.com/ory/hydra): Mock authorization workflows |
+| constant-time-analysis | Detects timing side-channels | [DudeCT Leakage Assessment Engine Examples](https://github.com/oreparaz/dudect/tree/master/examples): includes baseline target binaries (`dudect_donnabad`) displaying severe timing anomalies |
+| constant-time-testing | Tests for timing leaks | [DudeCT Leakage Assessment Engine Examples](https://github.com/oreparaz/dudect/tree/master/examples): includes baseline target binaries (`dudect_donnabad`) displaying severe timing anomalies |
+| container-hardening | Secures container configurations | [Docker Security: A Practical Guide](https://github.com/opscart/docker-security-practical-guide): contains intentionally vulnerable examples designed to test container runtime scanners |
 | containerization | Applies container security practices |  |
-| coverage-analysis | Analyzes security test coverage |  |
+| coverage-analysis | Analyzes security test coverage | [Google Fuzzbench Registry](https://github.com/google/fuzzbench): Houses modular, real-world target applications |
 | cpu-performance | Optimizes CPU-related security |  |
 | crypto-protocol-diagram | Visualizes crypto protocols |  |
 | database-security | Secures database access and queries |  |
 | defense-in-depth | Implements layered security |  |
 | devcontainer-setup | Secures dev container configs |  |
-| differential-review | Reviews PRs for security regressions |  |
-| discovery-mechanism | Secures service discovery |  |
+| differential-review | Reviews PRs for security regressions | [Official CodeQL](https://github.com/github/codeql/tree/main/go/ql/examples/snippets): Contains realistic commit-history deltas and flawed pull request examples |
+| discovery-mechanism | Secures service discovery | [Consul](https://github.com/hashicorp/consul): testing modules contain sample ACL configuration templates |
 | discovery-mechanisms | Implements multiple discovery patterns |  |
 | dynamic-client-registration | Secures dynamic OAuth client registration |  |
 | encrypted-communication | Enforces encrypted channels |  |
